@@ -5,4 +5,225 @@ body {
     margin: 0;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+}
+
+
+h1, 
+h2,
+h3,
+p {
+    color: #ADADB1;
+}
+
+
+
+h1,h2 {
+    font-family: 'BC Alphapipe';
+    font-weight:400;
+}
+
+p, a {
+    font-family: calibri;
+}
+
+#header-button {
+    background-color:rgba(27, 28, 47, 2.5%);
+    margin-top: 0;
+    width: 100%;
+    height: 80px;    
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    display: flex;
+    transition: height 0.5s, background-color 0.5s;
+}
+
+#header-button:hover{
+  height: 90px; 
+  background-color:rgba(27, 28, 47, 15%);
+  cursor: pointer;
+}
+
+#header-button:onclick ~ header {display:flex}
+
+#button-down {
+    width: 0; 
+    height: 0; 
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;    
+    border-top: 20px solid #1B1C2F; 
+    opacity: 10%;
+    position: relative;
+    top: 30px;    
+  }
+
+
+
+header {
+    margin-top: 0;
+    width: 100%;
+    height: 80px;
+    background-color:rgba(27, 28, 47, 60%);  
+    display: none;
+    justify-content: center;    
+}
+
+#title {
+    font-size: 40px;
+}
+
+.nav-bullet {
+    border-radius: 50%;   
+    height: 5px;
+    width: 5px;
+    display: inline-block;
+    margin: 2px;
+}
+
+nav {
+    margin: 16px;
+    color: #e2e2e2;
+    display: inline;
+    opacity: 100%;
+    padding: 10px;
+    position: relative;    
+    font-size: 30px;
+    letter-spacing: 0.5px;
+}
+
+section {
+    margin-left: auto;
+    margin-right: auto;   
+    width: 1000px;
+    height: 600px;
+    position: fixed;
+    top: 80px;
+}
+
+#logo {
+    background-image: url(./images/Asset\ 5-100.jpg);
+    background-size: contain;
+    width: 300px;
+    height:300px;
+    border-radius: 20% 0 20% 20%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 250px;
+    opacity: 65%;
+    
+}
+
+.main-info {
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+.main-info h1 {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-size: 40px;
+    font-stretch: 20px;
+}
+
+.main-info p {
+    width: 650px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+footer h2 {
+    text-align: center;
+}
+
+button {
+    border: 1px solid black;
+    border: none;
+    height: 170px;
+    width: 50px;
+    display: inline;
+    position: relative;
+    bottom: 150px;
+    background-color:rgba(27, 28, 47, 10%);
+    border-radius: 5%;
+    
+}
+
+#button-left {
+    right: 155px;
+}
+#icon-left {
+    width: 0; 
+    height: 0; 
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;     
+    border-right:20px solid #1B1C2F; 
+    position: relative;
+    left: 5px;
+    opacity: 80%;
+  }
+
+
+#button-right {
+    left: 1050px;
+}
+#icon-right {
+    width: 0; 
+    height: 0; 
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;    
+    border-left: 20px solid #1B1C2F;
+    position: relative;
+    left: 10px;
+    opacity: 60%;
+  }
+
+#circle-container {
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    bottom: 120px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.circle-nav {
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    background-color: #ADADB1;
+    margin: 6px;
+    display: inline-flex;
+    justify-content: center;
+    opacity: 60%;
+    
+    
+}
+
+#circle1 {
+    opacity: 100%;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    bottom: 5px;
+}
+
+footer {
+    width: 100%;
+    height: 120px;
+    margin-bottom: 0;
+    background-color:rgba(27, 28, 47, 30%);
+    position: fixed;    
+    bottom: 0;
+    left: 0;
+}
+
+footer h2 {
+    position: relative;
+    top: 20px;
+    font-size: 30px;
 }
