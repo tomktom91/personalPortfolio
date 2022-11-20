@@ -95,9 +95,6 @@ nav i:hover {
     visibility: visible;
 }
 
-#about-me {
-    visibility: hidden;
-}
 section {
     margin-left: auto;                                 /*<--- MAIN SECTION 1!!!!!!!!!!!*/  
     margin-right: auto;   
@@ -144,7 +141,10 @@ section {
 
                                                  /*<--- SECTION 2!!!!!!!!!!!*/  
 
-
+#about-me {
+    visibility: hidden;
+   
+}
 
 #profile-pic {
     background-image: url(./images/profile-pic.jpg);
