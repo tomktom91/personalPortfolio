@@ -38,6 +38,7 @@ p, a {
     top: 0;
     display: flex;
     transition: height 0.5s, background-color 0.5s;
+    
 }
 
 #header-button:hover{
@@ -46,7 +47,34 @@ p, a {
   cursor: pointer;
 }
 
+nav i {
+    padding: 10px 15px 15px 15px;
+}
+nav i, nav a {
+    color: #ADADB1;    
+    position: relative;
+    bottom: 25px;
+    transition: color 1s, padding 1s;
+    transition: visibility 0;
+}
 
+nav a {
+    visibility: hidden;
+    position: fixed;
+    top: 85px;
+    margin-left: 0;
+    paddin-top: 5px;
+    left: 48%;
+    display: inline;
+    float: left;
+}
+
+
+nav i:hover {
+ cursor:pointer; 
+ color: white;
+ padding: 10px 25px 25px 25px;
+}
 
 #button-down {
     width: 0; 
@@ -57,6 +85,7 @@ p, a {
     opacity: 15%;
     position: relative;
     top: 10px;  
+    transition: all 1s;
   }
 
 
@@ -69,28 +98,20 @@ header {
     display: flex;
     justify-content: center;  
     visibility: hidden;
-    
+    transition: all 1s;
     position: relative;
     bottom: 40px;
 }
 
 header:hover {
     height: 80px;
-    background-color:rgba(27, 28, 47, 70%);     
-    
-    padding: 10px;
+    background-color:rgba(27, 28, 47, 70%);        
+    padding: 15px;
 }
 #title {
     font-size: 40px;
 }
 
-.nav-bullet {
-    border-radius: 50%;   
-    height: 5px;
-    width: 5px;
-    display: inline-block;
-    margin: 2px;
-}
 
 nav {
     margin: 16px;

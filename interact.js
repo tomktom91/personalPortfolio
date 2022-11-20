@@ -4,43 +4,48 @@
 const headerButton = document.getElementById("header-button");
 const header = document.getElementsByTagName("header")[0];
 const logo = document.getElementById("logo-icon");
+//icon variables
+const homeIcon = document.getElementById("home-icon");
+const projectsIcon = document.getElementById("projects-icon");
+const contactsIcon = document.getElementById("contact-icon");
 
 
-headerButton.onmousedown = function(){
+
+headerButton.onclick = function(){          // ------------Activate Header
 headerButton.style.backgroundColor = "rgba(27, 28, 47, 0)";
-headerButton.nextElementSibling.style.transition = "all 1s";
 headerButton.nextElementSibling.style.visibility = "visible";
 headerButton.nextElementSibling.style.bottom = "0";
 headerButton.nextElementSibling.style.height = "90px";
 headerButton.nextElementSibling.style.backgroundColor = "rgba(27, 28, 47, 40%)";
-headerButton.firstChild.style.display = "none";
+headerButton.style.display = "none";
 
 }
-
-header.onclick = function(){
-    header.previousElementSibling.style.backgroundColor = "";
-    header.previousElementSibling.style.transition = "all 1s";    
-    header.nextElementSibling.style.transition = "all 1s";    
+header.onclick = function(){             //--Hide Header
+    header.previousElementSibling.style.backgroundColor = "";     
+    header.previousElementSibling.style.display = "flex";    
     header.style.visibility = "";
-    header.firstChild.style.visibility = "hidden";        
-    header.style.height = "1px";
-    
-
-}
-
-
-headerButton.onmouseup = function(){
-    headerButton.style.backgroundColor = "";
+    header.firstChild.style.visibility = "hidden";      
     
 }
 
-logo.onmousedown = function() {
-logo.style.backgroundColor = "rgba(27, 28, 47, 60%)";
-logo.style.backgroundImage = "none";
-headerButton.style.backgroundColor = "rgba(27, 28, 47, 60%)";
-}
 
-logo.onmouseup = function() {
-    logo.style.backgroundImage = "";
-    logo.style.backgroundColor = "rgba(27, 28, 47, 60%)";
-    }
+//--------Icon Info
+homeIcon.onmouseover = function(){
+    homeIcon.nextElementSibling.style.visibility = "visible";
+}
+homeIcon.onmouseout = function (){
+    homeIcon.nextElementSibling.style.visibility = "";
+}
+projectsIcon.onmouseover = function(){
+    projectsIcon.nextElementSibling.style.visibility = "visible";
+}
+projectsIcon.onmouseout = function (){
+    projectsIcon.nextElementSibling.style.visibility = "";
+}
+contactsIcon.onmouseover = function(){
+    contactsIcon.nextElementSibling.style.visibility = "visible";
+}
+contactsIcon.onmouseout = function (){
+    contactsIcon.nextElementSibling.style.visibility = "";
+}
+// End of Icon interactions
