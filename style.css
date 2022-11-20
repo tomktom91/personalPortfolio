@@ -32,7 +32,7 @@ p, a {
     background-color:rgba(27, 28, 47, 2.5%);
     margin-top: 0;
     width: 100%;
-    height: 80px;    
+    height: 40px;    
     justify-content: center;
     position: fixed;
     top: 0;
@@ -41,22 +41,22 @@ p, a {
 }
 
 #header-button:hover{
-  height: 90px; 
+  height: 60px; 
   background-color:rgba(27, 28, 47, 15%);
   cursor: pointer;
 }
 
-#header-button:onclick ~ header {display:flex}
+
 
 #button-down {
     width: 0; 
     height: 0; 
     border-left: 20px solid transparent;
     border-right: 20px solid transparent;    
-    border-top: 20px solid #1B1C2F; 
-    opacity: 10%;
+    border-top: 20px solid #ADADB1; 
+    opacity: 15%;
     position: relative;
-    top: 30px;    
+    top: 10px;  
   }
 
 
@@ -65,12 +65,21 @@ header {
     margin-top: 0;
     width: 100%;
     height: 80px;
-    background-color:rgba(27, 28, 47, 60%);  
+    background-color:rgba(27, 28, 47, 15%);  
     display: flex;
     justify-content: center;  
     visibility: hidden;
+    
+    position: relative;
+    bottom: 40px;
 }
 
+header:hover {
+    height: 80px;
+    background-color:rgba(27, 28, 47, 70%);     
+    
+    padding: 10px;
+}
 #title {
     font-size: 40px;
 }
