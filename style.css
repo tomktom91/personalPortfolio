@@ -125,6 +125,14 @@ header:hover {
 
 
 
+
+#intro {
+    visibility: visible;
+}
+
+#about-me {
+    visibility: hidden;
+}
 section {
     margin-left: auto;                                 /*<--- MAIN SECTION 1!!!!!!!!!!!*/  
     margin-right: auto;   
@@ -132,10 +140,11 @@ section {
     height: 600px;
     position: fixed;
     top: 80px;
+    transition: visibility 50ms;
 }
 
 #logo-icon {
-    background-image: url(./images/Asset\ 5-100.jpg);
+    background-image: url(./images/Asset\ 5-100.jpg);    
     background-size: contain;
     width: 300px;
     height:300px;
@@ -168,7 +177,25 @@ section {
     margin-right: auto;
 }
 
- 
+                                                 /*<--- SECTION 2!!!!!!!!!!!*/  
+
+
+
+#profile-pic {
+    background-image: url(./images/profile-pic.jpg);
+    background-size: contain;
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 250px;
+    opacity: 65%;
+}
+
+
+
+
 button {                       /*<--- BUTTONS !!!!!!!!!!!*/  
     border: 1px solid black;
     border: none;
@@ -189,6 +216,9 @@ button:hover {
 #button-left {
     right: 155px;
 }
+#button-right {
+    left: 1050px;
+}
 #icon-left {
     width: 0; 
     height: 0; 
@@ -200,11 +230,6 @@ button:hover {
     opacity: 80%;
     transition: all 1s;
   }
-
-
-#button-right {
-    left: 1050px;
-}
 #icon-right {
     width: 0; 
     height: 0; 
@@ -216,6 +241,40 @@ button:hover {
     opacity: 60%;
     transition: all 1s;
   }
+
+                         /* ------------- 2nd BUTTONS */
+  #button-left2 {
+    right: 155px;
+}
+#button-right2 {
+    left: 1050px;
+}
+#icon-left2 {
+    width: 0; 
+    height: 0; 
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;     
+    border-right:20px solid #1B1C2F; 
+    position: relative;
+    left: 5px;
+    opacity: 80%;
+    transition: all 1s;
+  }
+#icon-right2 {
+    width: 0; 
+    height: 0; 
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;    
+    border-left: 20px solid #1B1C2F;
+    position: relative;
+    left: 10px;
+    opacity: 60%;
+    transition: all 1s;
+  }
+
+
+
+
 #circle-container {
     width: 150px;
     display: flex;
@@ -247,6 +306,10 @@ button:hover {
 
 
  
+
+
+
+
 footer {
     width: 100%;
     height: 120px;
