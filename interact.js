@@ -1,6 +1,3 @@
-
-
-
 const headerButton = document.getElementById("header-button");
 const header = document.getElementsByTagName("header")[0];
 const logo = document.getElementById("logo-icon");
@@ -8,7 +5,9 @@ const logo = document.getElementById("logo-icon");
 const homeIcon = document.getElementById("home-icon");
 const projectsIcon = document.getElementById("projects-icon");
 const contactsIcon = document.getElementById("contact-icon");
-
+//arrow Variables
+const arrowLeft = document.getElementById("button-left");
+const arrowRight = document.getElementById("button-right");
 
 
 headerButton.onclick = function(){          // ------------Activate Header
@@ -27,8 +26,6 @@ header.onclick = function(){             //--Hide Header
     header.firstChild.style.visibility = "hidden";      
     
 }
-
-
 //--------Icon Info
 homeIcon.onmouseover = function(){
     homeIcon.nextElementSibling.style.visibility = "visible";
@@ -49,3 +46,26 @@ contactsIcon.onmouseout = function (){
     contactsIcon.nextElementSibling.style.visibility = "";
 }
 // End of Icon interactions
+
+arrowLeft.onmouseover = function (){
+    arrowLeft.children[0].style.borderTop = "30px solid transparent";
+    arrowLeft.children[0].style.borderBottom = "30px solid transparent";
+    arrowLeft.children[0].style.borderRight = "30px solid #ADADB1";
+}
+arrowLeft.onmouseout = function (){
+    arrowLeft.children[0].style.borderTop = "";
+    arrowLeft.children[0].style.borderBottom = "";
+    arrowLeft.children[0].style.borderRight = ""; 
+}
+
+
+arrowRight.onmouseover = function (){
+    arrowRight.children[0].style.borderTop = "30px solid transparent";
+    arrowRight.children[0].style.borderBottom = "30px solid transparent";
+    arrowRight.children[0].style.borderLeft = "30px solid #ADADB1";
+}
+arrowRight.onmouseout = function (){
+    arrowRight.children[0].style.borderTop = "";
+    arrowRight.children[0].style.borderBottom = "";
+    arrowRight.children[0].style.borderLeft = ""; 
+}
