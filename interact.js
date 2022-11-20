@@ -1,5 +1,4 @@
-const headerButton = document.getElementById("header-button");
-const header = document.getElementsByTagName("header")[0];
+const header = document.getElementsByTagName("header")[0]; 
 const logo = document.getElementById("logo-icon");
 //icon variables
 const homeIcon = document.getElementById("home-icon");
@@ -13,42 +12,45 @@ const arrowLeft2 = document.getElementById("button-left2");  //<!----- SECOND BU
 const arrowRight2 = document.getElementById("button-right2");
 
 
-headerButton.onclick = function(){          // ------------Activate Header
-headerButton.style.backgroundColor = "rgba(27, 28, 47, 0)";
-headerButton.nextElementSibling.style.visibility = "visible";
-headerButton.nextElementSibling.style.bottom = "0";
-headerButton.nextElementSibling.style.height = "90px";
-headerButton.nextElementSibling.style.backgroundColor = "rgba(27, 28, 47, 40%)";
-headerButton.style.display = "none";
 
-}
-header.onclick = function(){             //--Hide Header
-    header.previousElementSibling.style.backgroundColor = "";     
-    header.previousElementSibling.style.display = "flex";    
-    header.style.visibility = "";
-    header.firstChild.style.visibility = "hidden";      
-    
-}
+
+             //--Hide Header
+
+
+
 //--------Icon Info
-homeIcon.onmouseover = function(){
-    homeIcon.nextElementSibling.style.visibility = "visible";
+homeIcon.onmouseover = function(){    
+    homeIcon.parentElement.parentElement.children[1].innerHTML = "Home";
+    homeIcon.parentElement.parentElement.children[1].style.top = "105px";
 }
-homeIcon.onmouseout = function (){
-    homeIcon.nextElementSibling.style.visibility = "";
+homeIcon.onmouseout = function (){    
+    homeIcon.parentElement.parentElement.children[1].innerHTML = "";
+    homeIcon.parentElement.parentElement.children[1].style.top = "";
 }
 projectsIcon.onmouseover = function(){
-    projectsIcon.nextElementSibling.style.visibility = "visible";
+        projectsIcon.parentElement.parentElement.children[1].innerHTML = "Projects"; 
+        projectsIcon.parentElement.parentElement.children[1].style.top = "105px";   
 }
-projectsIcon.onmouseout = function (){
-    projectsIcon.nextElementSibling.style.visibility = "";
+projectsIcon.onmouseout = function(){
+    projectsIcon.parentElement.parentElement.children[1].innerHTML = "";
+    projectsIcon.parentElement.parentElement.children[1].style.top = "";  
 }
-contactsIcon.onmouseover = function(){
-    contactsIcon.nextElementSibling.style.visibility = "visible";
+
+contactsIcon.onmouseover = function(){   
+    contactsIcon.parentElement.parentElement.children[1].innerHTML = "Contact";
+    contactsIcon.parentElement.parentElement.children[1].style.top = "105px";   
+    
 }
-contactsIcon.onmouseout = function (){
-    contactsIcon.nextElementSibling.style.visibility = "";
+contactsIcon.onmouseout = function(){    
+    contactsIcon.parentElement.parentElement.children[1].innerHTML = "";
+    contactsIcon.parentElement.parentElement.children[1].style.top = "";  
 }
 // End of Icon interactions
+
+
+
+
+
 
 arrowLeft.onmouseover = function (){
     arrowLeft.children[0].style.borderTop = "30px solid transparent";
