@@ -89,3 +89,5 @@ arrowRight2.onclick = function (){
     arrowRight2.parentElement.parentElement.style.visibility = "hidden";
     arrowRight2.parentElement.parentElement.previousElementSibling.style.visibility = "visible";
 }
+
+
