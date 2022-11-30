@@ -24,3 +24,10 @@ const rightButton = document.getElementById("button-right");
    
    aboutSection.style.opacity = "100%";
 }); */
+
+function moveFromLeft(){
+    let id = null;
+    const elem = document.getElementById("animate");
+    let pos = 0;
+    clearInterval(id);
+}
