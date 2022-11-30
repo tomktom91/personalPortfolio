@@ -13,7 +13,8 @@ body {
 h1, 
 h2,
 h3,
-p {
+p,
+a {
     color: #ADADB1;
 }
 
@@ -29,76 +30,56 @@ p, a {
 }
 
 
-header {                                           /*<--- HEADER !!!!!!!!!!!*/  
-    margin-top: 0;
-    width: 100%;
-    height: 90px;
-    background-color:rgba(27, 28, 47, 15%);  
-    display: flex;
-    justify-content: center;      
-    transition: all 1s;
+header{    
     position: relative;
-    bottom: 40px;
+    right: 50%;        
 }
 
-header:hover {
-    height: 80px;
-    background-color:rgba(27, 28, 47, 70%);        
-    padding: 15px;
-}
-
-#title {
-    font-size: 40px;
-}
-                                           /*<--- NAV BAR !!!!!!!!!!!*/  
 nav {
-    margin: 16px;
-    color: #e2e2e2;
-    display: inline;
-    opacity: 100%;
-    padding: 10px;
-    position: relative;    
-    top: 5px;
-    font-size: 30px;
-    letter-spacing: 0.5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: relative;
+    left: 50px;
+    top: 120px;
+    
 }
-nav i {
-    padding: 15px 15px 15px 15px;
-    color: #1B1C2F;
-    opacity: 20%;
-}
-nav i{        
-    position: relative;    
-    transition: color 1s, padding 1s;
-    transition: visibility 0;
+header button {
+    opacity: 80%;
+    border-radius: 0;
+    width: 100px;
+    height: 100px;
+    margin: 0;
+    border-right: 1px solid rgba(163, 13, 62, 50%);
+    
 }
 
-header a {
-    opacity: 40%;
+#bottom-nav-button{
+    border-radius: 0 0 25% 0;
 }
-
-nav i:hover {
- cursor:pointer; 
- color: white;
- padding: 10px 25px 25px 25px;
-}
-
-#nav-info{          
-    color: #1B1C2F;
-    display: inline;    
-    font-size: 40px;    
-    position: absolute;
-    top: 90px;
-}
-
 #intro {
     visibility: visible;
+    align-content: center;
+    
+ 
+}
+
+#the-main-section {
+    background: linear-gradient(0deg, rgba(27,28,47,0.4) 50%, rgba(163,13,62,0) 100%);     
+    margin-left: auto;                                 /*<--- MAIN SECTION 1!!!!!!!!!!!*/  
+    margin-right: auto;
+    width: 1500px;
+    height: 750px;
+    border-radius: 2%;
+    display: flex;
+    justify-content: center;
+    
 }
 
 section {
     margin-left: auto;                                 /*<--- MAIN SECTION 1!!!!!!!!!!!*/  
     margin-right: auto;   
-    width: 1000px;
+    width: 800px;
     height: 600px;
     position: fixed;
     top: 80px;
@@ -108,12 +89,12 @@ section {
 #logo-icon {
     background-image: url(./images/Asset\ 5-100.jpg);    
     background-size: contain;
-    width: 300px;
-    height:300px;
+    width: 250px;
+    height:250px;
     border-radius: 20% 0 20% 20%;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 250px;
+    margin-top: 150px;
     opacity: 65%;
     transition: background-color 2s;
 }
@@ -143,55 +124,62 @@ section {
 
 #about-me {
     visibility: hidden;
-   
+    
 }
 
 #profile-pic {
     background-image: url(./images/profile-pic.jpg);
     background-size: contain;
     border-radius: 50%;
-    width: 300px;
-    height: 300px;
+    width: 250px;
+    height: 250px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 250px;
+    margin-top: 150px;
     opacity: 65%;
 }
 
 
 
 
-button {                       /*<--- BUTTONS !!!!!!!!!!!*/  
-    border: 1px solid black;
-    border: none;
-    margin-top: 90px;
-    height: 80px;
-    width: 50px;
-    display: inline;
+
+
+#button-container {        /*<--- BUTTONS !!!!!!!!!!!*/  
     position: relative;
-    bottom: 50px;
-    background-color:rgba(27, 28, 47, 10%);
+    height: 50px;  
+    width: 800px;  
+    display: flex;
+    margin-top: 50px;
+    
+    
+}
+
+button {                       
+    border: 1px solid black;
+    border: none;    
+    height: 50px;
+    width: 300px;
+    display: inline;     
+    background-color:#1B1C2F;    
     border-radius: 5%;    
+    margin-top: 20px;
 }
 
 button:hover {
     cursor: pointer;    
     transition: all 1s;
+    border: 3px solid RGB(18,21,117);
+
 }
-#button-left {
-    right: 155px;
-}
-#button-right {
-    left: 1050px;
-}
+
 #icon-left {
     width: 0; 
     height: 0; 
     border-top: 20px solid transparent;
     border-bottom: 20px solid transparent;     
-    border-right:20px solid #1B1C2F; 
+    border-right:20px solid rgba(112, 112, 112, 40%); 
     position: relative;
-    left: 5px;
+    left: 45%;
     opacity: 80%;
     transition: all 1s;
   }
@@ -200,28 +188,38 @@ button:hover {
     height: 0; 
     border-top: 20px solid transparent;
     border-bottom: 20px solid transparent;    
-    border-left: 20px solid #1B1C2F;
+    border-left: 20px solid rgba(112, 112, 112, 40%);
     position: relative;
-    left: 10px;
+    left: 45%;
     opacity: 60%;
     transition: all 1s;
   }
 
+#button-left{
+    background-color:#1B1C2F;  
+}
+
+#button-right{
+    background-color:#1B1C2F;  
+}
+
+#button-left2{
+    background-color:#1B1C2F;  
+}
+
+#button-right2{
+    background-color:#1B1C2F;  
+}
                          /* ------------- 2nd BUTTONS */
-  #button-left2 {
-    right: 155px;
-}
-#button-right2 {
-    left: 1050px;
-}
+ 
 #icon-left2 {
     width: 0; 
     height: 0; 
     border-top: 20px solid transparent;
     border-bottom: 20px solid transparent;     
-    border-right:20px solid #1B1C2F; 
+    border-right:20px solid rgba(112, 112, 112, 40%); 
     position: relative;
-    left: 5px;
+    left: 45%;
     opacity: 80%;
     transition: all 1s;
   }
@@ -230,25 +228,22 @@ button:hover {
     height: 0; 
     border-top: 20px solid transparent;
     border-bottom: 20px solid transparent;    
-    border-left: 20px solid #1B1C2F;
+    border-left: 20px solid rgba(112, 112, 112, 40%);
     position: relative;
-    left: 10px;
+    left: 45%;
     opacity: 60%;
     transition: all 1s;
   }
 
-
-
-
 #circle-container {
     width: 150px;
     display: flex;
-    justify-content: center;
-    position: fixed;
+    justify-content: center;    
     bottom: 160px;
     left: 46%;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 25px;
 }
 .circle-nav {
     border-radius: 50%;
@@ -267,12 +262,6 @@ button:hover {
     position: relative;
     bottom: 5px;
 }
-
-
-
- 
-
-
 
 
 footer {

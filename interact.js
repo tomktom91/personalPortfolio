@@ -14,42 +14,11 @@ const arrowRight2 = document.getElementById("button-right2");
 
 
 
-             //--Hide Header
-
-
+             //--Hide Header<<<<<<<<<<<<<<<<<\\\\\\\\\\\\\\\\\\//////////////////////////
 
 //--------Icon Info
-homeIcon.onmouseover = function(){    
-    homeIcon.parentElement.parentElement.children[1].innerHTML = "Home";
-    homeIcon.parentElement.parentElement.children[1].style.top = "105px";
-}
-homeIcon.onmouseout = function (){    
-    homeIcon.parentElement.parentElement.children[1].innerHTML = "";
-    homeIcon.parentElement.parentElement.children[1].style.top = "";
-}
-projectsIcon.onmouseover = function(){
-        projectsIcon.parentElement.parentElement.children[1].innerHTML = "Projects"; 
-        projectsIcon.parentElement.parentElement.children[1].style.top = "105px";   
-}
-projectsIcon.onmouseout = function(){
-    projectsIcon.parentElement.parentElement.children[1].innerHTML = "";
-    projectsIcon.parentElement.parentElement.children[1].style.top = "";  
-}
 
-contactsIcon.onmouseover = function(){   
-    contactsIcon.parentElement.parentElement.children[1].innerHTML = "Contact";
-    contactsIcon.parentElement.parentElement.children[1].style.top = "105px";   
-    
-}
-contactsIcon.onmouseout = function(){    
-    contactsIcon.parentElement.parentElement.children[1].innerHTML = "";
-    contactsIcon.parentElement.parentElement.children[1].style.top = "";  
-}
 // End of Icon interactions
-
-
-
-
 
 
 arrowLeft.onmouseover = function (){
@@ -76,15 +45,14 @@ arrowRight.onmouseout = function (){
 }
 
 arrowLeft.onclick = function (){
-    arrowLeft.parentElement.style.visibility = "hidden";
-    arrowLeft.parentElement.nextElementSibling.style.visibility = "visible";
+    arrowLeft.parentElement.parentElement.style.visibility = "hidden";
+    arrowLeft.parentElement.parentElement.nextElementSibling.style.visibility = "visible";
 }
 
 arrowRight.onclick = function (){
-    arrowRight.parentElement.style.visibility = "hidden";
-    arrowRight.parentElement.nextElementSibling.style.visibility = "visible";
+    arrowRight.parentElement.parentElement.style.visibility = "hidden";
+    arrowRight.parentElement.parentElement.nextElementSibling.style.visibility = "visible";
 }
-
 
 
 
@@ -101,7 +69,6 @@ arrowLeft2.onmouseout = function (){
     arrowLeft2.children[0].style.borderRight = ""; 
 }
 
-
 arrowRight2.onmouseover = function (){
     arrowRight2.children[0].style.borderTop = "30px solid transparent";
     arrowRight2.children[0].style.borderBottom = "30px solid transparent";
@@ -114,11 +81,11 @@ arrowRight2.onmouseout = function (){
 }
 
 arrowLeft2.onclick = function (){
-    arrowLeft2.parentElement.style.visibility = "hidden";
-    arrowLeft2.parentElement.previousElementSibling.style.visibility = "visible";
+    arrowLeft2.parentElement.parentElement.style.visibility = "hidden";
+    arrowLeft2.parentElement.parentElement.previousElementSibling.style.visibility = "visible";
 }
 
 arrowRight2.onclick = function (){
-    arrowRight2.parentElement.style.visibility = "hidden";
-    arrowRight2.parentElement.previousElementSibling.style.visibility = "visible";
+    arrowRight2.parentElement.parentElement.style.visibility = "hidden";
+    arrowRight2.parentElement.parentElement.previousElementSibling.style.visibility = "visible";
 }
