@@ -27,13 +27,16 @@ p, a {
     font-family: calibri;
 }
 
+a:hover {
+    cursor: pointer;
+}
 
 header{    
 position: fixed;
 top: 60px;
 }
 
-header button:hover{
+.header-button:hover{
     border-bottom: 4px solid RGB(18,21,117);    
 } 
 
@@ -41,13 +44,14 @@ nav {
     display: flex;     
 }
 
-header button {
+.header-button {
     background-color: RGBA(27,28,47,1%);
     border-radius: 0;
     width: 100px;
-    height: 60px;
+    height: 30px;
     margin: 0;
     border-bottom: 4px solid RGBA(173,173,177,0.5);    
+    text-align: center;
 }
 
 #skills-1{      
@@ -79,7 +83,7 @@ header button {
 .skillRow i {
     color: RGBA(163,13,62,6);
     margin-top: 40px;   
-}
+    }
 
 #skillRow1 {
     display: flex;
@@ -88,7 +92,7 @@ header button {
     display: flex;
     position: relative;
     left: 60px;   
-    text-align: end;
+    flex-direction: row-reverse;
 }
 #text-container2{
     margin-right: 20px;

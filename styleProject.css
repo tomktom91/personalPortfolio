@@ -32,12 +32,13 @@
     height: 250px;
     display: flex;
     z-index: 1;
-   
+    position: absolute;
+    bottom: -100px;
 }
 
 #right-container button {
     width: 25%;
-    height: 100%;
+    height: 150px;
     border-radius: 0;
     background-color:RGBA(27,28,47,20%);
     
@@ -55,17 +56,21 @@
 }
 
 #abbeyPic{
-    visibility: visible;
+    display: none;    
 }
 
 #boothPic{
-    visibility: hidden;
+    display: none;    
 }
 
 #greenpeacePic{
-    visibility: hidden;
+    display: none;    
 }
 
 #kartPic{
-    visibility: hidden;
+    display: none;    
+}
+
+.projectButton{
+    height: 150px;
 }

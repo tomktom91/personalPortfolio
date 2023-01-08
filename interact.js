@@ -12,8 +12,6 @@ const arrowLeft2 = document.getElementById("button-left2");  //<!----- SECOND BU
 const arrowRight2 = document.getElementById("button-right2");
 
 
-
-
              //--Hide Header<<<<<<<<<<<<<<<<<\\\\\\\\\\\\\\\\\\//////////////////////////
 
 //--------Icon Info
@@ -91,3 +89,8 @@ arrowRight2.onclick = function (){
 }
 
 
+const aboutMe = document.getElementById("middle-nav-button");
+
+aboutMe.mouseOver = function (){
+    
+}
