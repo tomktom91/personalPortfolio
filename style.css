@@ -29,11 +29,12 @@ p, a {
 
 a:hover {
     cursor: pointer;
+    color: rgb(18,21,117);
 }
 
 header{    
 position: fixed;
-top: 60px;
+top: 20px;
 }
 
 .header-button:hover{
@@ -327,11 +328,6 @@ justify-content: center;
    margin: 0;
    display: block;
 }
-
-
-
-
-
 
 footer {
     width: 100%;
