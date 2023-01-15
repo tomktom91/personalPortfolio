@@ -6,91 +6,133 @@ const projectsIcon = document.getElementById("projects-icon");
 const contactsIcon = document.getElementById("contact-icon");
 //arrow Variables
 const arrowLeft = document.getElementById("button-left");
-const arrowRight = document.getElementById("button-right");
-                                                 
-const arrowLeft2 = document.getElementById("button-left2");  //<!----- SECOND BUTTIONS
-const arrowRight2 = document.getElementById("button-right2");
-
-
-             //--Hide Header<<<<<<<<<<<<<<<<<\\\\\\\\\\\\\\\\\\//////////////////////////
-
-//--------Icon Info
-
-// End of Icon interactions
+const arrowRight = document.getElementById("button-right");                                                
+const intro = document.getElementById("intro");
+const aboutMe = document.getElementById("about-me");
+const contactSkills = document.getElementById("contact-me");
+const circleOne = document.getElementById("circle1");
+const circleTwo = document.getElementById("circle2");
+const circleThree = document.getElementById("circle3");
 
 
 arrowLeft.onmouseover = function (){
-    arrowLeft.children[0].style.borderTop = "30px solid transparent";
-    arrowLeft.children[0].style.borderBottom = "30px solid transparent";
-    arrowLeft.children[0].style.borderRight = "30px solid #ADADB1";
+    arrowLeft.children[0].style.borderTop = "40px double transparent";
+    arrowLeft.children[0].style.borderBottom = "40px double transparent";
+    arrowLeft.children[0].style.borderRight = "40px double rgba(163, 13, 62, 1)";
+    arrowLeft.style.width = "100px";
+    arrowLeft.style.height = "100px";
 }
 arrowLeft.onmouseout = function (){
     arrowLeft.children[0].style.borderTop = "";
     arrowLeft.children[0].style.borderBottom = "";
     arrowLeft.children[0].style.borderRight = ""; 
+    arrowLeft.style.width = "";
+    arrowLeft.style.height = "";
 }
 
 
 arrowRight.onmouseover = function (){
-    arrowRight.children[0].style.borderTop = "30px solid transparent";
-    arrowRight.children[0].style.borderBottom = "30px solid transparent";
-    arrowRight.children[0].style.borderLeft = "30px solid #ADADB1";
+    arrowRight.children[0].style.borderTop = "40px double transparent";
+    arrowRight.children[0].style.borderBottom = "40px double transparent";
+    arrowRight.children[0].style.borderLeft = "40px double rgba(163, 13, 62, 1)";
+    arrowRight.style.width = "100px";
+    arrowRight.style.height = "100px";
 }
 arrowRight.onmouseout = function (){
     arrowRight.children[0].style.borderTop = "";
     arrowRight.children[0].style.borderBottom = "";
     arrowRight.children[0].style.borderLeft = ""; 
-}
-
-arrowLeft.onclick = function (){
-    arrowLeft.parentElement.parentElement.style.visibility = "hidden";
-    arrowLeft.parentElement.parentElement.nextElementSibling.style.visibility = "visible";
-}
-
-arrowRight.onclick = function (){
-    arrowRight.parentElement.parentElement.style.visibility = "hidden";
-    arrowRight.parentElement.parentElement.nextElementSibling.style.visibility = "visible";
+    arrowRight.style.width = "";
+    arrowRight.style.height = "";
 }
 
 
+arrowLeft.addEventListener('click', () => {
+    let aboutMeVisible = aboutMe.style.visibility;
+    let introVisible = intro.style.visibility;
+    let contactVisible = contactSkills.style.visibility;
+    if (aboutMeVisible === '' && contactVisible === ''){
+        intro.style.visibility = "hidden";
+        aboutMe.style.visibility = "";
+        contactSkills.style.visibility = "visible";
+          circleTwo.style.opacity ="";
+          circleOne.style.opacity = "60%";
+          circleThree.style.opacity = "100%"
+        } else if (introVisible !== '' && aboutMeVisible === ''){
+            intro.style.visibility = "hidden";
+            aboutMe.style.visibility = "visible"; 
+            contactSkills.style.visibility = ""; 
+              circleTwo.style.opacity ="100%";
+              circleOne.style.opacity = "60%";
+    } else {
+        intro.style.visibility = "";
+        aboutMe.style.visibility = "";
+        contactSkills.style.visibility = "";
+          circleTwo.style.opacity ="";
+          circleOne.style.opacity = "";
+          circleThree.style.opacity = "";
+    }
+  })
+ 
+arrowRight.addEventListener('click', () => {
+  let aboutMeVisible = aboutMe.style.visibility;
+  let introVisible = intro.style.visibility;
+  let contactVisible = contactSkills.style.visibility;
+  if (aboutMeVisible === '' && contactVisible === ''){
+        intro.style.visibility = "hidden";
+        aboutMe.style.visibility = "visible"; 
+        contactSkills.style.visibility = ""; 
+          circleTwo.style.opacity ="100%";
+          circleOne.style.opacity = "60%";
+      } else if (introVisible != '' && aboutMeVisible != ''){
+        intro.style.visibility = "hidden";
+        aboutMe.style.visibility = "";
+        contactSkills.style.visibility = "visible";
+          circleTwo.style.opacity ="";
+          circleOne.style.opacity = "60%";
+          circleThree.style.opacity = "100%"
+  } else {
+        intro.style.visibility = "";
+        aboutMe.style.visibility = "";
+        contactSkills.style.visibility = "";
+          circleTwo.style.opacity ="";
+          circleOne.style.opacity = "";
+          circleThree.style.opacity = "";
+  }
+})
+
+const abbeyButton = document.getElementById("abbey-button");
+const boothButton = document.getElementById("booth-button");
+const greenpeaceButton = document.getElementById("greenpeace-button");
+const kartButton = document.getElementById("kart-button");
+const picContainer = document.getElementById("pic-container")
 
 
-                                                        //<!----- SECOND BUTTIONS
-arrowLeft2.onmouseover = function (){
-    arrowLeft2.children[0].style.borderTop = "30px solid transparent";
-    arrowLeft2.children[0].style.borderBottom = "30px solid transparent";
-    arrowLeft2.children[0].style.borderRight = "30px solid #ADADB1";
-}
-arrowLeft2.onmouseout = function (){
-    arrowLeft2.children[0].style.borderTop = "";
-    arrowLeft2.children[0].style.borderBottom = "";
-    arrowLeft2.children[0].style.borderRight = ""; 
-}
+abbeyButton.onmouseover = function (){
+  picContainer.style.backgroundImage = "url('./images/hotel-room-2022-11-16-22-05-53-utc.jpg')";
+};
+abbeyButton.onmouseleave = function (){
+  picContainer.style.backgroundImage = "";
+};
 
-arrowRight2.onmouseover = function (){
-    arrowRight2.children[0].style.borderTop = "30px solid transparent";
-    arrowRight2.children[0].style.borderBottom = "30px solid transparent";
-    arrowRight2.children[0].style.borderLeft = "30px solid #ADADB1";
-}
-arrowRight2.onmouseout = function (){
-    arrowRight2.children[0].style.borderTop = "";
-    arrowRight2.children[0].style.borderBottom = "";
-    arrowRight2.children[0].style.borderLeft = ""; 
-}
+boothButton.onmouseover = function (){
+  picContainer.style.backgroundImage = "url('./images/111b4076277005.5c64c075614c9.jpg')";
+};
 
-arrowLeft2.onclick = function (){
-    arrowLeft2.parentElement.parentElement.style.visibility = "hidden";
-    arrowLeft2.parentElement.parentElement.previousElementSibling.style.visibility = "visible";
-}
+boothButton.onmouseleave = function (){
+  picContainer.style.backgroundImage = "";
+};
 
-arrowRight2.onclick = function (){
-    arrowRight2.parentElement.parentElement.style.visibility = "hidden";
-    arrowRight2.parentElement.parentElement.previousElementSibling.style.visibility = "visible";
-}
+greenpeaceButton.onmouseover = function (){
+  picContainer.style.backgroundImage = "url('./images/90656b78166525.5c9cb71b03d6b.jpg')";
+};
+greenpeaceButton.onmouseleave = function (){
+  picContainer.style.backgroundImage = "";
+};
 
-
-const aboutMe = document.getElementById("middle-nav-button");
-
-aboutMe.mouseOver = function (){
-    
-}
+kartButton.onmouseover = function (){
+  picContainer.style.backgroundImage = "url('./images/a-karting-machine-vehicle-parked-near-racetrack-g-2022-11-16-18-41-42-utc.jpg')";
+};
+kartButton.onmouseleave = function (){
+  picContainer.style.backgroundImage = "";
+};

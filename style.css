@@ -13,6 +13,7 @@ body {
 h1, 
 h2,
 h3,
+h4,
 p,
 a {
     color: #ADADB1;
@@ -23,105 +24,62 @@ h1,h2, h3 {
     font-weight:400;
 }
 
-p, a {
+p, a, h4 {
     font-family: calibri;
 }
 
+a {
+    font-weight:800;
+    font-size: 30px;
+    text-decoration: none;
+}
 a:hover {
     cursor: pointer;
     color: rgb(18,21,117);
 }
 
 header{    
-position: fixed;
-top: 20px;
+  position: fixed;
+  width: 100%;
+  height: 80px;
+  /* background-color: rgba(163,13,62,0.5); */
+  display: flex;
+  justify-content: center;
 }
 
-.header-button:hover{
-    border-bottom: 4px solid RGB(18,21,117);    
-} 
+
 
 nav {
     display: flex;     
+    position: relative;    
+    width: 100%;
+    justify-content: center;
+    /* border-bottom: 4px solid RGBA(173,173,177,0.5); */
+    padding-top: 20px;
 }
 
 .header-button {
     background-color: RGBA(27,28,47,1%);
     border-radius: 0;
-    width: 100px;
+    width: 300px;
     height: 30px;
     margin: 0;
-    border-bottom: 4px solid RGBA(173,173,177,0.5);    
+        
     text-align: center;
 }
 
-#skills-1{      
-    width: 400px;
-    height: 400px;
-    position: absolute;
-    left: 40px;
-    top: 40px;
-    display: flex;
-    flex-direction: column;
-}
-
-#skills-2{
-    width: 400px;
-    height: 400px;
-    position: absolute;
-    right: 80px;
-    top: 90px;
-    display: flex;
-    flex-direction: column;
-    
-}
-
-.skillRow {
-   width: 100%;
-   height: 160px;    
-}
-
-.skillRow i {
-    color: RGBA(163,13,62,6);
-    margin-top: 40px;   
-    }
-
-#skillRow1 {
-    display: flex;
-}
-#skillRow2{
-    display: flex;
-    position: relative;
-    left: 60px;   
-    flex-direction: row-reverse;
-}
-#text-container2{
-    margin-right: 20px;
-}
-#skillRow3 {
-    display: flex;
-    positioN: relative;
-    left: 10px;
-}
-
-#skillRow4 {
-    display: flex;
-    flex-direction: row-reverse;
-}
-.design-text-container{
-    margin-left: 20px;
-}
 #intro {
     visibility: visible;
     align-content: center;    
 }
+
 #the-main-section {
     background: linear-gradient(0deg, rgba(27,28,47,0.4) 50%, rgba(163,13,62,0) 100%);     
     margin-left: auto;                                 /*<--- MAIN SECTION 1!!!!!!!!!!!*/  
     margin-right: auto;
     width: 1500px;
-    height: 750px;
-    border-radius: 2%;
+    height: 100%;
+    /*border-radius: 2%;*/
     display: flex;
     justify-content: center;    
 }
@@ -179,10 +137,108 @@ section {
     opacity: 65%;
 }
 
+.contact-box {
+width: 500px;
+height: 500px;
+}
+
+#left-box {
+grid-column-start: 1;
+grid-column-end: 5;
+width: 100%;
 
 
+}
+#contact-title {
+    font-size: 40px;
+    position: relative;
+    top: 30px;
+}
+
+#left-box h1, #left-box p {
+  margin-left: 10px;
+}
+
+#project-list {
+    display: grid;
+    width: 750px;
+    grid-template-rows: repeat(4, auto);
+    height: 400px;
+    grid-template-columns: auto auto auto;  
+    
+    margin: 0;
+}
+
+#pic-container {
+    grid-row: 1 / 5;
+    grid-column: 2 / 4;    
+    width:500px;
+    height: 100%;
+    object-fit: contain;
+    border-right: 4px solid RGBA(173,173,177,0.5);
+    background-size: contain;
+}
+#abbey-button {
+    grid-column: 1 / 2;
+    grid-row: 1 / 1;
+    
+}
+
+#booth-button {
+    grid-column: 1 / 2;
+    grid-row: 2 / 2;
+}
+
+#greenpeace-button {
+    grid-column: 1 / 2;
+    grid-row: 3 / 3;
+}
+
+#kart-button {
+    grid-column: 1 / 2;
+    grid-row: 4 / 4;
+}
+
+.proj-button {
+    width: 200px;
+    height: 80px;
+    background-color: #1B1C2F; 
+    border: none;
+    margin: 2px;
+    text-align: left;    
+}
 
 
+.proj-button:hover {
+    cursor: pointer;
+    color: rgb(18,21,117);
+}
+.proj-button h4{
+    position: relative;
+    top: 25px;
+}
+
+#right-box {
+    grid-column-start: 5;
+    grid-column-end: 6;
+}
+#contact-me {
+top: 50px;
+display: grid;
+grid-template-columns: repeat(6, 150px);
+grid-column-gap: 50px;
+visibility: hidden;
+position: relative;
+right: 100px;
+width: 1200px;
+}
+#contact-me h1 {
+    display: block;
+}
+
+.proj-pic {
+    visibility: hidden;
+}
 
 #button-container {        /*<--- BUTTONS !!!!!!!!!!!*/  
     position: relative;
@@ -190,48 +246,56 @@ section {
     width: 800px;  
     display: flex;
     margin-top: 50px;
-    
+    display: none;
     
 }
 
-button {                       
-    border: 1px solid rgba(163, 13, 62, 50%);
-    border: none;    
-    height: 50px;
-    width: 50px;
+#front-nav {
+    width: 1300px;
+    height: 200px;
+    display: flex;
+    position: absolute;
+    top: 620px;
+}
+
+.nav-button {                       
+    border: 5px double rgba(163, 13, 62, 1);      
+    height: 80px;
+    width: 80px;
     display: inline;     
-    background-color:#1B1C2F;    
+    background-color: rgba(163, 13, 62, 0); 
     border-radius: 50%;    
     margin-top: 20px;
+
 }
 
-button:hover {
+.nav-button:hover {
     cursor: pointer;    
     transition: all 1s;
-    border: 3px solid RGB(18,21,117);
+    
 
 }
 
 #icon-left {
     width: 0; 
     height: 0; 
-    border-top: 20px solid transparent;
-    border-bottom: 20px solid transparent;     
-    border-right:20px solid rgba(112, 112, 112, 40%); 
+    border-top: 30px double transparent;
+    border-bottom: 30px double transparent;     
+    border-right:30px double rgba(163, 13, 62, 1); 
     position: relative;
-    left: 45%;
-    opacity: 80%;
+    left: 15%;
+    
     transition: all 1s;
   }
 #icon-right {
     width: 0; 
     height: 0; 
-    border-top: 20px solid transparent;
-    border-bottom: 20px solid transparent;    
-    border-left: 20px solid rgba(112, 112, 112, 40%);
+    border-top: 30px double transparent;
+    border-bottom: 30px double transparent;    
+    border-left: 30px double rgba(163, 13, 62, 1);
     position: relative;
-    left: 45%;
-    opacity: 60%;
+    left: 35%;
+    
     transition: all 1s;
   }
 
@@ -243,65 +307,33 @@ button:hover {
     background-color:#1B1C2F;  
 }
 
-#button-left2{
-    background-color:#1B1C2F;  
-}
-
-#button-right2{
-    background-color:#1B1C2F;  
-}
-                         /* ------------- 2nd BUTTONS */
  
-#icon-left2 {
-    width: 0; 
-    height: 0; 
-    border-top: 20px solid transparent;
-    border-bottom: 20px solid transparent;     
-    border-right:20px solid rgba(112, 112, 112, 40%); 
-    position: relative;
-    left: 45%;
-    opacity: 80%;
-    transition: all 1s;
-  }
-#icon-right2 {
-    width: 0; 
-    height: 0; 
-    border-top: 20px solid transparent;
-    border-bottom: 20px solid transparent;    
-    border-left: 20px solid rgba(112, 112, 112, 40%);
-    position: relative;
-    left: 45%;
-    opacity: 60%;
-    transition: all 1s;
-  }
 
 #circle-container {
-    width: 150px;
+    width: 500px;
     display: flex;
     justify-content: center;    
     bottom: 160px;
     left: 46%;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 25px;
+    margin-top: 80px;
+    
 }
 .circle-nav {
-    border-radius: 50%;
-    width: 20px;
-    height: 20px;
-    background-color: #ADADB1;
-    margin: 6px;
-    display: inline-flex;
-    justify-content: center;
-    opacity: 60%;     
+   
+    width: 100px;
+    height: 5px;
+    background-color: rgba(163, 13, 62, 1);
+    margin: 6px;   
+    opacity: 60%;    
+    
 }
 #circle1 {
     opacity: 100%;
-    width: 30px;
-    height: 30px;
-    position: relative;
-    bottom: 5px;
+    
 }
+
 
 #skills {
 background-color: #ADADB1;
@@ -315,8 +347,7 @@ justify-content: center;
 }
 
 #skill-container {
-    width: 100%;
-   
+    width: 100%;   
     margin-left: auto;
     margin-right: auto;
     
@@ -329,28 +360,6 @@ justify-content: center;
    display: block;
 }
 
-footer {
-    width: 100%;
-    height: 120px;
-    margin-bottom: 0;
-    background-color:rgba(27, 28, 47, 30%);
-    position: fixed;    
-    bottom: 0;
-    left: 0;
-    display: flex;
-    justify-content: center;
-}
-
-footer h2 {
-    position: relative;
-    top: 20px;
-    font-size: 30px;
-}
-
-footer h2 {
-    text-align: center;
-    display: none;
-}
 
 #skill-icon-holder i {
     padding: 30px 15px 15px 15px;
@@ -361,4 +370,49 @@ footer h2 {
 #skill-icon-holder i:hover{
     color: #ADADB1;
     padding: 20px;
+    
 }
+
+ /* ------------- TABLET */
+
+ @media screen and (max-width: 768px) {
+    .header-button {        
+        width: 150px;
+        height: 50px;        
+    }    
+        nav {
+        justify-content: center;
+    }
+
+    section {
+        top: 10px;
+    }
+    a {
+        position: relative;
+        top: 20px;
+        font-size: 26px;
+       
+    }
+    #the-main-section {
+        width: 100%;
+        height: 1500px;
+        
+    }
+    #logo-icon {
+        width: 200px;
+        height: 200px;
+    }
+    #front-nav {
+        width: 400px;
+        top: 580px;
+    }
+
+    .main-info p {
+        width: 500px;
+    }
+
+    #contact-me {
+        width: 600px;
+        top: 60px;
+    }
+ }
