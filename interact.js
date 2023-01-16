@@ -14,6 +14,45 @@ const circleOne = document.getElementById("circle1");
 const circleTwo = document.getElementById("circle2");
 const circleThree = document.getElementById("circle3");
 
+const homeNav = document.getElementById("home-nav");
+const aboutNav = document.getElementById("about-nav");
+const projNav = document.getElementById("proj-nav");
+const contactNav = document.getElementById("contact-nav");
+
+homeNav.onclick = function (){
+    intro.style.visibility = "";
+    aboutMe.style.visibility = "";
+    contactSkills.style.visibility = "";
+      circleTwo.style.opacity ="";
+      circleOne.style.opacity = "";
+      circleThree.style.opacity = "";
+}
+
+aboutNav.onclick = function (){
+    intro.style.visibility = "hidden";
+    aboutMe.style.visibility = "visible"; 
+    contactSkills.style.visibility = ""; 
+      circleTwo.style.opacity ="100%";
+      circleOne.style.opacity = "60%";
+}
+
+contactNav.onclick = function (){
+  intro.style.visibility = "hidden";
+  aboutMe.style.visibility = "";
+  contactSkills.style.visibility = "visible";
+    circleTwo.style.opacity ="";
+    circleOne.style.opacity = "60%";
+    circleThree.style.opacity = "100%"
+}
+
+projNav.onclick = function (){
+  intro.style.visibility = "hidden";
+  aboutMe.style.visibility = "";
+  contactSkills.style.visibility = "visible";
+    circleTwo.style.opacity ="";
+    circleOne.style.opacity = "60%";
+    circleThree.style.opacity = "100%"
+}
 
 arrowLeft.onmouseover = function (){
     arrowLeft.children[0].style.borderTop = "40px double transparent";
